@@ -12,13 +12,17 @@
         <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control" %>
       </div>
 
-      <% if devise_mapping.rememberable? %>
-        <%= f.check_box :remember_me %> Remember Me
-      <% end %>
+      <div>
+        <% if devise_mapping.rememberable? %>
+          <%= f.check_box :remember_me %> Remember Me
+        <% end %>
 
-      <span class="pull-right">
-        <%= link_to "Forgot Password", new_user_password_path %>
-      </span>
+        <span class="pull-right">
+          <%= link_to "Forgot Password", new_user_password_path %>
+        </span>
+      </div>
+
+      <br/><br/>
 
       <div class="actions">
         <%= f.submit "Log in", class: "btn btn-normal btn-block" %>
